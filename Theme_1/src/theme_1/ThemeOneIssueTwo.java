@@ -6,10 +6,7 @@ public class ThemeOneIssueTwo {
 	
 	public static void main (String[] args)
 	{
-		//for (types type : types.values()) findMinMax(type);
-		findMinMax(types.INT);
-		findMinMax(types.BYTE);
-		findMinMax(types.CHAR);
+		for (types type : types.values()) findMinMax(type);
 	}	
 
 	public static void findMinMax(types type) {
