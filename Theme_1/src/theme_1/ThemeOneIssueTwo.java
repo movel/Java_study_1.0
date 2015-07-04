@@ -1,39 +1,42 @@
 package theme_1;
 
 public class ThemeOneIssueTwo {
-
+	
+	enum types {INT, BYTE, CHAR};
+	
 	public static void main (String[] args)
 	{
-		printMinMax("int");
-		printMinMax("byte");
-		printMinMax("char");
+		//for (types type : types.values()) findMinMax(type);
+		findMinMax(types.INT);
+		findMinMax(types.BYTE);
+		findMinMax(types.CHAR);
 	}	
 
-	public static void printMinMax(String type) {
-		long minValue = 0;
-		long maxValue = 0;
-		long startValue;
-		long endValue;
+	public static void findMinMax(types type) {
+		long minType = 0;
+		long maxType = 0;
 		
-		if (type.equals("int")) {
-			startValue = Integer.MIN_VALUE;
-			endValue = Integer.MAX_VALUE;
-		} else if (type.equals("byte")) {			
-			startValue = Byte.MIN_VALUE;
-			endValue = Byte.MAX_VALUE;
-		} else if (type.equals("char")) {			
-			startValue = Character.MIN_VALUE;
-			endValue = Character.MAX_VALUE;
-		} else {
-			System.out.println("Invalid [type] argument");
-			return;
+		if (type == types.INT) {
+			minType = Integer.MIN_VALUE;
+			maxType = Integer.MAX_VALUE;
+		} 
+		if (type == types.BYTE) {			
+			minType = Byte.MIN_VALUE;
+			maxType = Byte.MAX_VALUE;
+		}
+		if (type == types.CHAR) {			
+			minType = Character.MIN_VALUE;
+			maxType = Character.MAX_VALUE;
 		}
 		
-		for (long i = startValue; i <= endValue; i++) {
-			if (i < minValue) minValue = i;
-			if (i > maxValue) maxValue = i;			
+		long Min = minType;
+		long Max = maxType;
+		for (long i = minType; i <= maxType; i++) {
+			if (i < Min) Min = i;
+			if (i > Max) Max = i;
 		}
 		
-		System.out.println(type + ". Min: " + minValue + ", Max: " + maxValue);
-	}	
+		System.out.println(" Minimum " + type + " = " + Min);
+		System.out.println(" Maximum " + type + " = " + Max);
+	}
 }
