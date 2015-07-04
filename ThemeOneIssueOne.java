@@ -3,7 +3,6 @@ public class ThemeOneIssueOne {
 	private static int []a;
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		a = getArray();
 		bubbleSort();
 		for(int i : a)	System.out.println(i);
