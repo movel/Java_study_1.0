@@ -2,8 +2,6 @@ package theme_1;
 
 public class ThemeOneIssueTwo {
 	
-	enum types {INT, BYTE, CHAR};
-	
 	public static void main (String[] args)
 	{
 		findMinMaxInt();
@@ -12,51 +10,33 @@ public class ThemeOneIssueTwo {
 	}	
 
 	public static void findMinMaxInt() {
-		int count = 0;
-		int max = 0;
-		int min = 0;
-		boolean x = true;
-		while(x){
-			max = count;
+		int count = 1;
+		while(count > 0){
 			count++;
-			min = count;
-			if (min < max) x = false;
 		}
-		
-		System.out.println("Minimum type int = " + min);
-		System.out.println("Maximum type int = " + max);
+		System.out.println("Minimum type int = " + count);
+		--count;
+		System.out.println("Maximum type int = " + count);
 	}
 	
 	public static void findMinMaxByte() {
-		byte count = 0;
-		byte max = 0;
-		byte min = 0;
-		boolean x = true;
-		while(x){
-			max = count;
+		byte count = 1;
+		while(count > 0){
 			count++;
-			min = count;
-			if (min < max) x = false;
 		}
-		
-		System.out.println("Minimum type byte = " + min);
-		System.out.println("Maximum type byte = " + max);
+		System.out.println("Minimum type byte = " + count);
+		--count;
+		System.out.println("Maximum type byte = " + count);
 	}
 	
 	public static void findMinMaxChar() {
-		char count = 0;
-		char max = 0;
-		char min = 0;
-		boolean x = true;
-		while(x){
-			max = count;
+		char count = 1;
+		while(count > 0){
 			count++;
-			min = count;
-			if (min < max) x = false;
 		}
-		
-		System.out.println("Minimum type char = " + min);
-		System.out.println("Maximum type char = " + max);
+		System.out.println("Minimum type char = " + count);
+		--count;
+		System.out.println("Maximum type char = " + count);
 	}
 	
 }
