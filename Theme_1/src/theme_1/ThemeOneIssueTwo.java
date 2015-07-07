@@ -6,34 +6,57 @@ public class ThemeOneIssueTwo {
 	
 	public static void main (String[] args)
 	{
-		for (types type : types.values()) findMinMax(type);
+		findMinMaxInt();
+		findMinMaxByte();
+		findMinMaxChar();
 	}	
 
-	public static void findMinMax(types type) {
-		long minType = 0;
-		long maxType = 0;
-		
-		if (type == types.INT) {
-			minType = Integer.MIN_VALUE;
-			maxType = Integer.MAX_VALUE;
-		} 
-		if (type == types.BYTE) {			
-			minType = Byte.MIN_VALUE;
-			maxType = Byte.MAX_VALUE;
-		}
-		if (type == types.CHAR) {			
-			minType = Character.MIN_VALUE;
-			maxType = Character.MAX_VALUE;
+	public static void findMinMaxInt() {
+		int count = 0;
+		int max = 0;
+		int min = 0;
+		boolean x = true;
+		while(x){
+			max = count;
+			count++;
+			min = count;
+			if (min < max) x = false;
 		}
 		
-		long Min = minType;
-		long Max = maxType;
-		for (long i = minType; i <= maxType; i++) {
-			if (i < Min) Min = i;
-			if (i > Max) Max = i;
-		}
-		
-		System.out.println(" Minimum " + type + " = " + Min);
-		System.out.println(" Maximum " + type + " = " + Max);
+		System.out.println("Minimum type int = " + min);
+		System.out.println("Maximum type int = " + max);
 	}
+	
+	public static void findMinMaxByte() {
+		byte count = 0;
+		byte max = 0;
+		byte min = 0;
+		boolean x = true;
+		while(x){
+			max = count;
+			count++;
+			min = count;
+			if (min < max) x = false;
+		}
+		
+		System.out.println("Minimum type byte = " + min);
+		System.out.println("Maximum type byte = " + max);
+	}
+	
+	public static void findMinMaxChar() {
+		char count = 0;
+		char max = 0;
+		char min = 0;
+		boolean x = true;
+		while(x){
+			max = count;
+			count++;
+			min = count;
+			if (min < max) x = false;
+		}
+		
+		System.out.println("Minimum type char = " + min);
+		System.out.println("Maximum type char = " + max);
+	}
+	
 }
